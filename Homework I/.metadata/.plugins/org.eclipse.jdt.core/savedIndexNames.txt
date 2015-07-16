@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+C:\Users\Milen\Documents\GitHub\Java-Projects\Java-Projects\Java-Projects\Homework I\.metadata\.plugins\org.eclipse.jdt.core
