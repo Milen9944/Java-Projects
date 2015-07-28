@@ -1,0 +1,28 @@
+package PrintingNumDividedByNum;
+
+import java.util.Scanner;
+
+public class OutputNumCanBeDividedByThreeAndSeven {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Please , Enter(INPUT) anumber where our program will end");
+		
+		Scanner input = new Scanner(System.in);
+		int userInputNumber = input.nextInt();
+		
+		for(int counter = 1; counter <= userInputNumber; counter++){
+			
+			if(counter % 3 == 1 && counter % 7 == 0){
+				
+				System.out.println(counter);
+			
+			}
+		}
+		
+		input.close();
+		
+
+	}
+
+}

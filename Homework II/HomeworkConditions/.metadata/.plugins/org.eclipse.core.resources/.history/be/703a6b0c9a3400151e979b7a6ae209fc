@@ -1,0 +1,27 @@
+package BuildTriangle;
+
+import java.util.Scanner;
+
+public class BuildTriangleWithSidesNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Input three numbers and I will tell you if you can build a triangle");
+		
+		Scanner input = new Scanner(System.in);
+		
+		int fSide = input.nextInt();
+		int sSide = input.nextInt();
+		int tSide = input.nextInt();
+		
+		int fs = fSide + sSide;
+		int st = sSide + tSide;
+		int ft = fSide + tSide;
+		
+		if((fs || ft) > (sSide || tSide)){
+			System.out.println();
+		}
+	}
+
+}

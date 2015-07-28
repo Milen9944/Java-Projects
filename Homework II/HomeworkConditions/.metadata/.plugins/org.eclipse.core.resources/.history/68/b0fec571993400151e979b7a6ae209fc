@@ -1,0 +1,24 @@
+package BuildTriangle;
+
+import java.util.Scanner;
+
+public class BuildTriangleWithSidesNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Input three numbers and I will tell you if you can build a triangle");
+		
+		Scanner input = new Scanner(System.in);
+		
+		int fSide = input.nextInt();
+		int sSide = input.nextInt();
+		int tSide = input.nextInt();
+		
+		if( ((fSide + sSide) || (fSide + tSide) || 
+				(sSide + tSide)) > ((fSide) || (sSide) || (tSide)) ){
+			System.out.println("The triangle is possible");
+		}
+	}
+
+}

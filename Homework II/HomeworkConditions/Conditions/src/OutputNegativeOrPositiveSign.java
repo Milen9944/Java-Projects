@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class OutputNegativeOrPositiveSign {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Enter two numbers");
+		
+		Scanner input = new Scanner(System.in);
+		
+		int firstNum = input.nextInt();
+		int secondNum = input.nextInt();
+		
+		if((firstNum > 0 && secondNum > 0) || (firstNum < 0 & secondNum < 0)){
+			
+			System.out.println("The sign of the quotient is \"+\"");
+		}else if((firstNum > 0 && secondNum < 0) || (firstNum <0 && secondNum >0)){
+			
+			System.out.println("The sign of the quotient \"-\"");
+		}
+		
+		input.close();
+	}
+
+}

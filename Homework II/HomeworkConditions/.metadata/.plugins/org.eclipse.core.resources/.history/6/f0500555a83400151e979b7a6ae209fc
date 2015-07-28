@@ -1,0 +1,44 @@
+package GameBonuses;
+
+import java.util.Scanner;
+
+public class CalculatingBonusesBasesGameResults {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Enter your earned points in our briliant game "
+				+ "and I will calculate them for you");
+		
+		Scanner input = new Scanner(System.in);
+		
+		int userPoints = input.nextInt();
+		
+		if(userPoints >= 1 && userPoints <= 3){
+		
+			int result = userPoints * 5;
+			
+			System.out.println("Your game result is: " + result);
+			
+		}else if(userPoints >= 4 && userPoints <= 6){
+			
+			int result = userPoints * 10;
+			
+			System.out.println("Your game result is: " + result);
+			
+		}else if(userPoints >= 7 && userPoints <= 9){
+			
+			int result = userPoints * 50;
+			
+			System.out.println("Your game result is: " + result);
+		}else{
+			
+			System.out.println("Your result is completely crazy."
+					+ "Maybe you are the inventor of our game");
+			
+		}
+		
+		input.close();
+		
+	}
+
+}

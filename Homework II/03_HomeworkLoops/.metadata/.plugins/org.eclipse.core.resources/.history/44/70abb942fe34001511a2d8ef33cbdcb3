@@ -1,0 +1,23 @@
+package PrintingNumbers;
+
+import java.util.Scanner;
+
+public class PrintingNumbersFromUserInput {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Please , Enter(INPUT) anumber where our program will end");
+		
+		Scanner input = new Scanner(System.in);
+		int userInputNumber = input.nextInt();
+		
+		for(int counter = 1; counter < userInputNumber; counter++){
+			
+			System.out.println(counter);
+			
+		}
+		
+		input.close();
+	}
+
+}
