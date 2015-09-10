@@ -1,0 +1,39 @@
+package VechileStock;
+
+import java.util.Scanner;
+
+public class VechileInfo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Car[] arrayCar = new Car[10];
+		arrayCar[0] = new Automobile(1000 , 7.5);
+		arrayCar[1] = new Automobile(7534 , 4.8);
+		arrayCar[2] = new Automobile(1235 , 10.2);
+		arrayCar[3] = new Automobile(3665 , 9.4);
+		arrayCar[4] = new Automobile(1387 , 3.8);
+		arrayCar[5] = new SUV(87633 , true);
+		arrayCar[6] = new SUV(6853 , false);
+		arrayCar[7] = new SUV(542356 , true);
+		arrayCar[8] = new SUV(1248 , false);
+		arrayCar[9] = new SUV(89842 , true);
+		
+		for(int i = 0; i < arrayCar.length; i++){
+			for(int j = 0;j < arrayCar.length - 1;j++){
+				if(arrayCar[i].price > arrayCar[i + 1].price){
+					int swap;
+					swap = arrayCar[i +1].price;
+					arrayCar[i +1].price = arrayCar[i].price;
+					arrayCar[i].price = swap;
+				}
+			}
+		}
+		System.out.println("Sorted Array");
+		for(int i = 0;i < arrayCar.length; i++){
+			
+			arrayCar[i].printPrice();
+		}
+	}
+
+}

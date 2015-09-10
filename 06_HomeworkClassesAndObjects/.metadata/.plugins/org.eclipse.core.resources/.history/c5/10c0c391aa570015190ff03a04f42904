@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class CatIsSaying {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in , "UTF-8");
+		
+		String currentName;
+		int currentAge;
+		
+		Cat[] catsArray = new Cat[10];
+		
+		for(int i = 0; i < catsArray.length;i++){
+			System.out.println("Enter name of a cat: ");
+			currentName = input.nextLine();
+			System.out.println("Enter age of the same cat: ");
+			currentAge = input.nextInt();
+			catsArray[i] = new Cat();
+			catsArray[i].setName(currentName);
+			catsArray[i].setAge(currentAge);
+		}
+		for(int i = 0; i < catsArray.length;i++){
+			catsArray[i].Say();
+		}
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+package Convertor;
+
+public class Convert {
+	private double degrees;
+	
+	public Convert(){
+		this.degrees = 0.0d;
+	}
+	
+	public Convert(double degrees){
+		setDegrees(degrees);
+	}
+	
+	public double getDegrees() {
+		return degrees;
+	}
+	
+	public void setDegrees(double degrees) {
+		this.degrees = degrees;
+	}
+	
+	public double convertion(double celsius){
+		
+		double fahrenheit = ((degrees*9)/ 5) + 32;
+		return fahrenheit;
+	}
+}
