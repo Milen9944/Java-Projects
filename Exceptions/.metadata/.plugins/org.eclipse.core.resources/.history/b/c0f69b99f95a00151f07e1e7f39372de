@@ -1,0 +1,25 @@
+
+public class Account {
+
+	protected double sum;
+
+	public Account() throws NegativeMoneyException {
+		this.sum = 0;
+	}
+
+	public Account(double balance) throws NegativeMoneyException {
+		setSum(balance);
+	}
+
+	public double getSum() {
+		return this.sum;
+	}
+
+	public void setSum(double sum) throws NegativeMoneyException {
+		if (sum < 0) {
+			throw new NegativeMoneyException("Your balance can not be negative!");
+		}
+		this.sum = sum;
+	}
+
+}

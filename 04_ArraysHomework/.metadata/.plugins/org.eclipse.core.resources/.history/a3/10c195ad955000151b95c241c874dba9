@@ -1,0 +1,39 @@
+package Arrays;
+
+import java.rmi.server.SocketSecurityException;
+
+public class TwoDimensionArrOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[][] pureMatrix = new int[4][4];
+		int material = 0;
+		
+		for(int i=0 ; i < pureMatrix.length ; i++){
+			for(int j = 0 ; j < pureMatrix[i].length; j++){
+				
+				pureMatrix[i][j] = material;
+				material++;
+				
+				
+			}
+			
+		}
+		
+		for(int i=0; i<pureMatrix.length; i++){
+			for(int j = 0; j < pureMatrix.length; j++){
+				if(pureMatrix[i][j] % 2 == 1){
+					System.out.println(pureMatrix[i][j]);
+					System.out.println();
+					pureMatrix[i][j] *= 2;
+					System.out.println(pureMatrix[i][j]);
+				}else{
+					continue;
+				}
+				
+			}
+		}	
+	}
+
+}

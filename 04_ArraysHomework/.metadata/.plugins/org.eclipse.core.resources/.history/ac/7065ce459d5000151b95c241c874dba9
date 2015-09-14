@@ -1,0 +1,38 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class FibonacciSequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in , "UTF-8");
+		
+		int n = scan.nextInt();
+		long[] fibonArr = new long[n]; 
+		
+		for(int i=0; i < fibonArr.length;i++){
+			if(i == 0){
+				fibonArr[i] = 0;
+			}else if(i == 1){
+				fibonArr[i] = 1;
+				
+			}else{
+				fibonArr[i] = fibonArr[i-1] + fibonArr[i-2];
+				
+			}
+			
+		}
+		
+		System.out.println("Fibonacci's numbers are:");
+		
+		for(int i =0;i < fibonArr.length; i++){
+			
+			System.out.println(fibonArr[i]);
+		}
+		
+		
+	}
+
+}

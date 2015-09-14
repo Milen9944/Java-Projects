@@ -1,0 +1,35 @@
+
+package Arrays;
+
+public class CopyArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] numbers = {1 , 2 , 3, 4};
+		int[] copyNum = new int[numbers.length];
+		int k = 1;
+		for(int i =0; i < numbers.length; i ++){
+			
+			numbers[i] = k;
+			System.out.println(k);
+			k++;
+			System.out.println(k);
+		}
+		System.out.println();
+		for(int i=0;i < numbers.length ; i++){
+		
+			numbers[i] = copyNum[i];
+//			System.out.println(i);
+			
+		}
+		
+//		System.out.println(copyNum[2]);
+//		System.out.println(numbers[3]);
+		
+//		System.arraycopy(numbers, 0, copyNum, 0, numbers.length);
+//		System.out.println(copyNum[3]);
+//		System.out.println(numbers[3]);
+	}
+		
+}
