@@ -1,0 +1,5 @@
+package ObjectOrientedProgramming;
+
+public class Writing {
+	public void writeMemoir();
+}
