@@ -1,0 +1,24 @@
+package UsingThreadPool;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+
+public class ThreadPool {
+
+	public static void main(String[] args) {
+		ExecutorService executor = Executors.newFixedThreadPool(7);
+		for (int i = 1; i < 6; i++) {
+			MyThread someThread = new MyThread();
+			executor.execute(someThread);
+			someThread.setName("Thread: " + i);
+			System.out.printf("Hi,I am %s!Nice to meet you!%n", someThread.getName());
+
+		}
+		executor.shutdown();
+		while (!executor.isTerminated()) {
+		}
+		System.out.println("Finished all threads!");
+
+	}
+
+}

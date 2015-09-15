@@ -1,0 +1,5 @@
+package MessagesByThreads;
+
+public class Message {
+
+}

@@ -1,0 +1,25 @@
+package MessagesByThreads;
+
+public class Running {
+
+	public static void main(String[] args) {
+		Message thread1 = new Message();
+		
+		new Thread(){
+			public void run(){
+				thread1.writeNumbers();
+			}
+		}.start();
+		
+		Message secondThread = new Message();
+		new Thread(){
+			public void run(){
+				secondThread.printMessage();
+			}
+		}.start();
+
+
+
+	}
+
+}

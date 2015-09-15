@@ -1,0 +1,15 @@
+package NoThreadPool;
+
+public class FourthThread {
+	public void run() {
+		System.out.println("The thread is started!"+this.getName());
+		System.out.println("My name is "+this.getName());
+		try {
+			Thread.sleep(3000);
+			System.out.printf("The thread complete!(%s)%n",this.getName());
+		} catch (InterruptedException e) {
+			System.out.println(e);
+			e.printStackTrace();
+		}
+	}
+}

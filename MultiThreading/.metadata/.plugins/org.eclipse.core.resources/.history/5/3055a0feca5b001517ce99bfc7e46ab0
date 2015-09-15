@@ -1,0 +1,33 @@
+package MessagesByThreads;
+
+public class Message extends Thread {
+	
+	synchronized void writeNumbers() {
+		for (int i = 0; i <= 50000; i++) {
+			System.out.println(i);
+
+			if (i == 25000) {
+				try {
+					wait();
+				} catch (Exception e) {
+
+				}
+
+			}
+		}
+	}
+
+	synchronized void writeText() {
+		for (int i = 0; i < 20; i++) {
+			System.out.println("Running");
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				System.out.println(e);
+				e.printStackTrace();
+			}
+		}
+		notify();
+	}
+
+}

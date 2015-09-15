@@ -1,0 +1,28 @@
+package NoThreadPool;
+
+public class FourthThread {
+	public void run() {
+		System.out.println("The thread is started!");
+		this.setName("Fourth thread");
+		System.out.println("I am " + this.getName() + "!");
+		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			System.out.println(e);
+			e.printStackTrace();
+		}		
+		System.out.println("The" + this.getName() + " complete!");
+	}
+
+	private String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private void setName(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

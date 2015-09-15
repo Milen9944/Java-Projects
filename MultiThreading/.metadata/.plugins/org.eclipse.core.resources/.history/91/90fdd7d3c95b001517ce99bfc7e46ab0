@@ -1,0 +1,23 @@
+package MessagesByThreads;
+
+public class Running {
+
+	public static void main(String[] args) {
+		Message message = new Message();
+		
+		new Thread() {
+			public void run() {
+				message.writeNumbers();
+			}
+		}.start();
+
+		new Thread() {
+			public void run() {
+				message.writeText();
+			}
+		}.start();
+
+
+	}
+
+}
